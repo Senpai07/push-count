@@ -1,8 +1,8 @@
-create table s_count (
+create table counter (
   id                bigserial,
-  push              int not null,
+  quantity     int not null,
   primary key (id)
 );
 
-insert into s_count (push)
+insert into counter (quantity)
 values (0);
