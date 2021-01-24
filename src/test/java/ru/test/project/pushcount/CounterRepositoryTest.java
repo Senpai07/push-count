@@ -22,7 +22,7 @@ public class CounterRepositoryTest {
     private TestEntityManager testEntityManager;
 
     @Test
-    public void categoryRepositoryTest() {
+    public void counterRepositoryTest() {
         CounterEntity counter = new CounterEntity();
         counter.setQuantity(1);
         testEntityManager.persist(counter);

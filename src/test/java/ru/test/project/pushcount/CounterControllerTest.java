@@ -32,7 +32,7 @@ public class CounterControllerTest {
     private CounterService counterService;
 
     @Test
-    public void getAllCategoryTest() throws Exception {
+    public void getCounterTest() throws Exception {
         CounterEntity counterEntity = new CounterEntity();
         counterEntity.setId(1L);
         counterEntity.setQuantity(1);

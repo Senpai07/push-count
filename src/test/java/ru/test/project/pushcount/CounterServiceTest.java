@@ -22,17 +22,17 @@ public class CounterServiceTest {
     private CounterRepository counterRepository;
 
     @Test
-    public void findOneCategoryTest() {
+    public void findOneCounterTest() {
         CounterEntity counterFromDb = new CounterEntity();
         counterFromDb.setQuantity(1);
 
         Mockito.doReturn(Optional.of(counterFromDb)).when(counterRepository).findById(1L);
 
-        CounterEntity categoryMilk = counterService.findById(1L).get();
+        CounterEntity counterEntity = counterService.findById(1L).get();
 
-        Assertions.assertNotNull(categoryMilk);
+        Assertions.assertNotNull(counterEntity);
 
-        Assertions.assertEquals(1, categoryMilk.getQuantity());
+        Assertions.assertEquals(1, counterEntity.getQuantity());
 
         Mockito.verify(counterRepository, Mockito.times(1))
                 .findById(ArgumentMatchers.eq(1L));
